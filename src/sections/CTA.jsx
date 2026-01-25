@@ -24,18 +24,20 @@ export default function CTA() {
         </h2>
 
         <p className="text-xl text-primary-100 mb-10 max-w-2xl mx-auto">
-          Teste grátis por 14 dias. Sem cartão de crédito. Cancele quando quiser.
+          Teste grátis por 7 dias. Sem cartão de crédito. Cancele quando quiser.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            variant="secondary"
-            size="lg"
-            className="bg-white hover:bg-gray-50 text-primary-700"
-          >
-            Testar grátis por 14 dias
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <a href="http://localhost:5174/login?register=true">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="bg-white hover:bg-gray-50 text-primary-700"
+            >
+              Testar grátis por 7 dias
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </a>
           <Button
             variant="outline"
             size="lg"

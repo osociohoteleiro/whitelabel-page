@@ -90,10 +90,12 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button size="lg">
-                Testar grátis por 14 dias
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="http://localhost:5174/login?register=true">
+                <Button size="lg">
+                  Testar grátis por 7 dias
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
               <Button variant="secondary" size="lg">
                 <Play className="w-5 h-5" />
                 Ver demonstração

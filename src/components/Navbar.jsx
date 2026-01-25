@@ -63,12 +63,16 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Entrar
-            </Button>
-            <Button size="sm">
-              Testar Grátis
-            </Button>
+            <a href="http://localhost:5174/login">
+              <Button variant="ghost" size="sm">
+                Entrar
+              </Button>
+            </a>
+            <a href="http://localhost:5174/login?register=true">
+              <Button size="sm">
+                Testar Grátis
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,12 +100,16 @@ export default function Navbar() {
               </a>
             ))}
             <div className="pt-4 flex flex-col gap-3">
-              <Button variant="secondary" className="w-full">
-                Entrar
-              </Button>
-              <Button className="w-full">
-                Testar Grátis
-              </Button>
+              <a href="http://localhost:5174/login">
+                <Button variant="secondary" className="w-full">
+                  Entrar
+                </Button>
+              </a>
+              <a href="http://localhost:5174/login?register=true">
+                <Button className="w-full">
+                  Testar Grátis
+                </Button>
+              </a>
             </div>
           </div>
         </div>

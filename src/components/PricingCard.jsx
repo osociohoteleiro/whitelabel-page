@@ -50,12 +50,14 @@ export default function PricingCard({
         ))}
       </ul>
 
-      <Button
-        variant={highlighted ? 'secondary' : 'primary'}
-        className="w-full"
-      >
-        {ctaText}
-      </Button>
+      <a href="http://localhost:5174/login?register=true">
+        <Button
+          variant={highlighted ? 'secondary' : 'primary'}
+          className="w-full"
+        >
+          {ctaText}
+        </Button>
+      </a>
     </div>
   )
 }

@@ -67,7 +67,7 @@ const faqs = {
   custos: [
     {
       question: 'Tem período de teste?',
-      answer: 'Sim! 14 dias grátis, sem cartão de crédito. Teste todas as funcionalidades.',
+      answer: 'Sim! 7 dias grátis, sem cartão de crédito. Teste todas as funcionalidades.',
     },
     {
       question: 'Posso cancelar quando quiser?',
