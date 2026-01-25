@@ -82,6 +82,46 @@ const segments = [
       'Promoções sazonais',
     ],
   },
+  {
+    icon: '📢',
+    title: 'Agências de Marketing',
+    benefits: [
+      'Gerencie múltiplos clientes em um painel',
+      'White label com sua marca',
+      'Relatórios automatizados por cliente',
+      'Revenda com margem de lucro',
+    ],
+  },
+  {
+    icon: '👔',
+    title: 'Profissionais Liberais',
+    benefits: [
+      'Agenda integrada com Google Calendar',
+      'Confirmação automática de reuniões',
+      'Coleta de documentos pelo WhatsApp',
+      'Follow-up de propostas enviadas',
+    ],
+  },
+  {
+    icon: '📱',
+    title: 'Influenciadores Digitais',
+    benefits: [
+      'Responda DMs automaticamente 24h',
+      'Qualifique parcerias comerciais',
+      'Envie mídia kit automaticamente',
+      'Agende posts e stories',
+    ],
+  },
+  {
+    icon: '🏛️',
+    title: 'Organizações Governamentais',
+    benefits: [
+      'Atendimento ao cidadão 24h',
+      'Respostas automáticas sobre serviços',
+      'Agendamento de atendimento presencial',
+      'Redução de filas e tempo de espera',
+    ],
+  },
 ]
 
 export default function Segments() {

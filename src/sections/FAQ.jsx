@@ -17,11 +17,11 @@ const faqs = {
     },
     {
       question: 'Funciona com meu WhatsApp atual?',
-      answer: 'Sim. Você pode conectar seu número atual ou usar um número dedicado. Funciona tanto com WhatsApp Business quanto número pessoal.',
+      answer: 'Sim. Você pode conectar seu número atual ou usar um número dedicado. Funciona tanto com WhatsApp Business APP quanto WhatsApp Cloud.',
     },
     {
       question: 'Quantos canais posso conectar?',
-      answer: 'Depende do plano. O Professional permite WhatsApp, Instagram, Facebook e Email. No Enterprise, não há limites.',
+      answer: 'Dependendo do plano, você pode conectar: WhatsApp APP, WhatsApp Cloud, Instagram Direct, Facebook Messenger, Comentários do Instagram, Comentários do Facebook, Booking.com, Airbnb e Expedia.',
     },
     {
       question: 'Posso usar em mais de um negócio/unidade?',

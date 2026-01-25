@@ -19,7 +19,7 @@ const plans = [
     name: 'Professional',
     description: 'Para empresas em crescimento',
     features: [
-      '3 workspaces',
+      '1 workspace',
       'Todos os canais',
       'IA avançada com ferramentas',
       'Editor de fluxos de automação',
@@ -44,16 +44,12 @@ const plans = [
     highlighted: false,
   },
   {
-    name: 'Enterprise',
-    description: 'Para grandes operações',
+    name: 'Parceiros',
+    description: 'Para revendedores e agências',
     features: [
+      'Suporte Premium',
       'Workspaces ilimitados',
-      'White label completo',
-      'IA customizada',
-      'Integrações sob medida',
-      'Onboarding dedicado',
-      'Gerente de conta',
-      'SLA garantido',
+      'Testadores',
     ],
     highlighted: false,
     ctaText: 'Falar com vendas',
@@ -72,7 +68,7 @@ export default function Pricing() {
             Escolha o plano ideal para você
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comece grátis por 14 dias. Sem cartão de crédito.
+            Comece grátis por 7 dias. Sem cartão de crédito.
           </p>
         </div>
 

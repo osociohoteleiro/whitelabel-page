@@ -2,21 +2,26 @@ import React from 'react'
 import { Check, X } from 'lucide-react'
 
 const features = [
-  { name: 'Chat unificado multi-canal', us: true, whatsapp: false, zendesk: true, chatbot: false },
-  { name: 'IA treinada no seu negócio', us: true, whatsapp: false, zendesk: false, chatbot: false },
-  { name: 'Editor visual de automações', us: true, whatsapp: false, zendesk: true, chatbot: false },
-  { name: 'CRM integrado', us: true, whatsapp: false, zendesk: true, chatbot: false },
-  { name: 'Base de conhecimento (RAG)', us: true, whatsapp: false, zendesk: false, chatbot: false },
-  { name: 'Marketing automatizado', us: true, whatsapp: false, zendesk: false, chatbot: false },
-  { name: '100% em português', us: true, whatsapp: true, zendesk: false, chatbot: true },
-  { name: 'Preço acessível', us: true, whatsapp: true, zendesk: false, chatbot: true },
+  { name: 'Chat unificado multi-canal', us: true, manychat: true, botconversa: false, kommo: true },
+  { name: 'IA treinada no seu negócio', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: 'Criação de artes com IA', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: 'Anúncios Meta/Google integrados', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: 'Postagens automáticas nas redes', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: 'Editor visual de automações', us: true, manychat: true, botconversa: true, kommo: true },
+  { name: 'CRM integrado', us: true, manychat: false, botconversa: false, kommo: true },
+  { name: 'Base de conhecimento (RAG)', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: 'Marketing automatizado', us: true, manychat: true, botconversa: true, kommo: true },
+  { name: 'Atendimento humano + IA juntos', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: 'Tudo em um só lugar', us: true, manychat: false, botconversa: false, kommo: false },
+  { name: '100% em português', us: true, manychat: false, botconversa: true, kommo: true },
+  { name: 'Preço acessível', us: true, manychat: false, botconversa: true, kommo: false },
 ]
 
 const competitors = [
   { key: 'us', name: 'Nossa Plataforma', highlight: true },
-  { key: 'whatsapp', name: 'WhatsApp Business', highlight: false },
-  { key: 'zendesk', name: 'Zendesk', highlight: false },
-  { key: 'chatbot', name: 'Chatbots Simples', highlight: false },
+  { key: 'manychat', name: 'ManyChat', highlight: false },
+  { key: 'botconversa', name: 'BotConversa', highlight: false },
+  { key: 'kommo', name: 'Kommo CRM', highlight: false },
 ]
 
 export default function Comparison() {

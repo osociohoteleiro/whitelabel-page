@@ -31,11 +31,18 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-600 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-600 rounded-xl flex items-center justify-center relative overflow-hidden">
+              <svg viewBox="0 0 40 40" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Cifrão estilizado com engrenagem */}
+                <circle cx="20" cy="20" r="14" stroke="white" strokeWidth="2" strokeDasharray="4 2" opacity="0.3"/>
+                <path d="M20 8V32" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                <path d="M15 12C15 12 17 10 20 10C23 10 26 12 26 15C26 18 23 19 20 20C17 21 14 22 14 25C14 28 17 30 20 30C23 30 25 28 25 28" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                {/* Setas de crescimento */}
+                <path d="M28 14L32 10M32 10L28 10M32 10L32 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </div>
             <span className={`font-bold text-xl ${isScrolled ? 'text-gray-900' : 'text-gray-900'}`}>
-              Automação
+              MV<span className="text-accent-600">$</span>
             </span>
           </a>
 

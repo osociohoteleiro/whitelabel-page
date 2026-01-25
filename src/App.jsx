@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Hero from './sections/Hero'
+import ProductShowcase from './sections/ProductShowcase'
 import Problem from './sections/Problem'
 import Features from './sections/Features'
 import HowItWorks from './sections/HowItWorks'
@@ -18,6 +19,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <ProductShowcase />
         <Problem />
         <Features />
         <HowItWorks />
