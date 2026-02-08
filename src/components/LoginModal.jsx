@@ -1,8 +1,15 @@
 import { useState } from 'react'
 import { X, ArrowRight, Eye, EyeOff, Loader2, Sparkles } from 'lucide-react'
 
-// URL da API - ajuste conforme ambiente
-const API_URL = 'http://localhost:3001/api'
+// URL da API - usa produção se não for localhost
+const API_URL = window.location.hostname === 'localhost'
+  ? 'http://localhost:3001/api'
+  : 'https://api.osociohoteleiro.com.br/api'
+
+// URL do dashboard
+const DASHBOARD_URL = window.location.hostname === 'localhost'
+  ? 'http://localhost:5174/dashboard'
+  : 'https://app.iaihotel.com.br/dashboard'
 
 export default function LoginModal({ isOpen, onClose, onOpenSignup }) {
   const [showPassword, setShowPassword] = useState(false)
@@ -67,7 +74,7 @@ export default function LoginModal({ isOpen, onClose, onOpenSignup }) {
       localStorage.setItem('user', JSON.stringify(data.user))
 
       // Redirecionar para o dashboard/app
-      window.location.href = 'http://localhost:5174/dashboard'
+      window.location.href = DASHBOARD_URL
     } catch (err) {
       setError(err.message)
     } finally {
