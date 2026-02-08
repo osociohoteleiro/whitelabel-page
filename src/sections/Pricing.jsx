@@ -56,7 +56,7 @@ const plans = [
   },
 ]
 
-export default function Pricing() {
+export default function Pricing({ onOpenSignup }) {
   return (
     <section id="planos" className="py-20 lg:py-32 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +74,7 @@ export default function Pricing() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 items-start">
           {plans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
+            <PricingCard key={index} {...plan} onOpenSignup={onOpenSignup} />
           ))}
         </div>
 

@@ -2,100 +2,116 @@ import React, { useState } from 'react'
 import FAQItem from '../components/FAQItem'
 
 const faqCategories = [
-  { key: 'plataforma', label: 'Plataforma' },
-  { key: 'ia', label: 'IA' },
-  { key: 'implementacao', label: 'Implementação' },
+  { key: 'geral', label: 'Geral' },
+  { key: 'ia', label: 'IA & Automação' },
+  { key: 'marketing', label: 'Marketing' },
+  { key: 'atendimento', label: 'Atendimento' },
   { key: 'custos', label: 'Custos' },
-  { key: 'seguranca', label: 'Segurança' },
 ]
 
 const faqs = {
-  plataforma: [
+  geral: [
+    {
+      question: 'O que é a Máquina de Vender Muito?',
+      answer: 'É uma plataforma completa que substitui agências, freelancers e ferramentas avulsas. A IA cria sua estratégia de marketing, landing pages, artes, posts, responde clientes 24/7, gerencia leads e processa pagamentos — tudo em um só lugar.',
+    },
     {
       question: 'Preciso de conhecimento técnico?',
-      answer: 'Não. A plataforma foi desenhada para ser usada por qualquer pessoa. O editor visual permite criar automações arrastando e soltando, sem código.',
+      answer: 'Não. A plataforma foi feita para empreendedores, não para programadores. Você edita páginas clicando nos elementos, cria automações arrastando blocos, e treina a IA enviando textos e fotos do seu negócio.',
     },
     {
-      question: 'Funciona com meu WhatsApp atual?',
-      answer: 'Sim. Você pode conectar seu número atual ou usar um número dedicado. Funciona tanto com WhatsApp Business APP quanto WhatsApp Cloud.',
+      question: 'Funciona para qualquer tipo de negócio?',
+      answer: 'Sim! Hotéis, restaurantes, clínicas, escritórios de advocacia, imobiliárias, academias, salões de beleza, e-commerces e muito mais. A IA se adapta ao seu segmento e aprende sobre seu negócio específico.',
     },
     {
-      question: 'Quantos canais posso conectar?',
-      answer: 'Dependendo do plano, você pode conectar: WhatsApp APP, WhatsApp Cloud, Instagram Direct, Facebook Messenger, Comentários do Instagram, Comentários do Facebook, Booking.com, Airbnb e Expedia.',
-    },
-    {
-      question: 'Posso usar em mais de um negócio/unidade?',
-      answer: 'Sim! Cada negócio pode ter seu próprio workspace com configurações independentes. Ideal para redes e franquias.',
+      question: 'Posso usar em mais de um negócio ou filial?',
+      answer: 'Sim! Cada negócio tem seu próprio workspace com configurações independentes: IA própria, canais próprios, equipe própria. Ideal para redes, franquias e agências.',
     },
   ],
   ia: [
     {
-      question: 'A IA vai substituir meus atendentes?',
-      answer: 'Não. A IA trabalha junto com seu time. Ela responde perguntas repetitivas (70% do volume) e escala para humanos quando necessário. Seu time foca nas vendas complexas.',
+      question: 'Como a IA monta minha estratégia de marketing?',
+      answer: 'Você responde um questionário sobre seu negócio (público-alvo, diferenciais, objetivos). Em 5 minutos, a IA gera um plano completo: personas, tom de voz, calendário de conteúdo, sugestões de campanha e muito mais.',
     },
     {
-      question: 'Posso personalizar as respostas da IA?',
-      answer: 'Sim. Você treina a IA com sua base de conhecimento (textos, PDFs, imagens). Também pode corrigir respostas - a IA aprende com as correções.',
+      question: 'A IA cria landing pages de verdade?',
+      answer: 'Sim! Em 60 segundos a IA cria uma página completa de alta conversão. E diferente de outras ferramentas como Lovable, você edita qualquer elemento diretamente na página — texto, imagens, cores, botões — sem código.',
     },
     {
-      question: 'A IA pode enviar fotos e vídeos?',
-      answer: 'Sim! A IA tem acesso à sua galeria de mídias e envia automaticamente quando relevante. Por exemplo, se o cliente pede "fotos do quarto", ela envia.',
+      question: 'A IA vai substituir meus funcionários?',
+      answer: 'Não substitui, potencializa. A IA responde perguntas repetitivas (70% do volume), faz follow-up automático e aplica técnicas de venda 24/7. Seu time foca nas negociações complexas e no relacionamento.',
     },
     {
-      question: 'E se a IA não souber responder?',
-      answer: 'Ela transfere automaticamente para um atendente humano. Você configura quando isso acontece (confiança baixa, assuntos específicos, etc).',
+      question: 'Como a IA aprende sobre meu negócio?',
+      answer: 'Você alimenta a base de conhecimento com textos, PDFs, fotos e vídeos. A IA usa tecnologia RAG (Retrieval Augmented Generation) para responder com precisão sobre seus produtos, preços, políticas e diferenciais.',
+    },
+    {
+      question: 'Posso corrigir respostas da IA?',
+      answer: 'Sim! Se a IA errar, você corrige ali mesmo. Ela aprende com as correções e não repete o erro. Quanto mais você usa, mais inteligente ela fica.',
     },
   ],
-  implementacao: [
+  marketing: [
     {
-      question: 'Quanto tempo leva para configurar?',
-      answer: 'A configuração básica leva minutos: conectar WhatsApp e ativar a IA padrão. O treinamento completo da IA com sua base de conhecimento leva algumas horas.',
+      question: 'Como funciona a criação de artes?',
+      answer: 'A IA gera artes profissionais em segundos — posts para redes sociais, banners, stories. Você só descreve o que quer ou deixa a IA sugerir baseado na sua estratégia. Tchau, Canva.',
     },
     {
-      question: 'Preciso instalar alguma coisa?',
-      answer: 'Não. É 100% web. Funciona em qualquer navegador, computador ou celular.',
+      question: 'A plataforma posta automaticamente nas redes sociais?',
+      answer: 'Sim! Você programa posts para Instagram, Facebook e outras redes. A IA pode criar 30 dias de conteúdo em 30 minutos. Tchau, social media.',
     },
     {
-      question: 'Vocês oferecem treinamento?',
-      answer: 'Sim. Temos tutoriais em vídeo, central de ajuda, e treinamento ao vivo para planos Business e Enterprise.',
+      question: 'Posso criar anúncios no Meta e Google?',
+      answer: 'Sim! A plataforma tem integração nativa com Meta Ads e Google Ads. Crie campanhas, defina públicos e orçamentos, tudo sem sair da MV$. E o melhor: sem comissão sobre suas vendas.',
     },
     {
-      question: 'Posso migrar de outra plataforma?',
-      answer: 'Sim. Fazemos migração de histórico de conversas e leads de outras plataformas.',
+      question: 'Vocês cobram comissão sobre anúncios?',
+      answer: 'Não! Diferente de agências que cobram 10-20% sobre o valor investido em mídia, aqui você paga apenas a mensalidade fixa. Invista R$ 10.000 em ads e economize até R$ 2.000/mês.',
+    },
+  ],
+  atendimento: [
+    {
+      question: 'Quais canais de atendimento posso conectar?',
+      answer: 'WhatsApp (APP e Cloud), Instagram Direct, Facebook Messenger, comentários do Instagram e Facebook. Para hotéis: Booking.com, Airbnb e Expedia. Todas as conversas em uma única tela.',
+    },
+    {
+      question: 'A IA responde em todos os canais?',
+      answer: 'Sim! A mesma IA treinada no seu negócio responde no WhatsApp, Instagram, Facebook — mantendo consistência na comunicação e aplicando as mesmas técnicas de venda.',
+    },
+    {
+      question: 'E se o cliente quiser falar com um humano?',
+      answer: 'A IA transfere automaticamente para sua equipe quando detecta: baixa confiança na resposta, assuntos sensíveis, ou quando o cliente pede. Você define as regras.',
+    },
+    {
+      question: 'Como funciona o CRM de leads?',
+      answer: 'Todo contato vira um lead automaticamente. A IA classifica por interesse, registra histórico de conversas, agenda follow-ups e até recupera carrinhos abandonados. Zero lead esquecido.',
     },
   ],
   custos: [
     {
-      question: 'Tem período de teste?',
-      answer: 'Sim! 7 dias grátis, sem cartão de crédito. Teste todas as funcionalidades.',
+      question: 'Quanto custa comparado a contratar profissionais?',
+      answer: 'Uma fração. Consultor de marketing + designer + social media + gestor de tráfego + ferramentas avulsas pode passar de R$ 10.000/mês facilmente. A MV$ faz tudo isso por uma mensalidade acessível.',
     },
     {
-      question: 'Posso cancelar quando quiser?',
-      answer: 'Sim. Sem multa, sem fidelidade. Você pode exportar seus dados a qualquer momento.',
+      question: 'Tem período de teste?',
+      answer: 'Sim! 7 dias grátis com acesso a todas as funcionalidades. Sem cartão de crédito. Cancele quando quiser.',
     },
     {
       question: 'O preço aumenta conforme uso?',
-      answer: 'Não há surpresas. Cada plano tem limites claros. Se precisar de mais, você faz upgrade.',
-    },
-  ],
-  seguranca: [
-    {
-      question: 'Meus dados estão seguros?',
-      answer: 'Sim. Usamos criptografia em todas as comunicações, servidores no Brasil, backups diários, e seguimos todas as normas da LGPD.',
+      answer: 'Não há surpresas. Cada plano tem limites claros de workspaces, canais e recursos. Precisa de mais? Faz upgrade. Simples assim.',
     },
     {
-      question: 'Quem tem acesso às conversas dos meus clientes?',
-      answer: 'Apenas você e sua equipe (com as permissões que você definir). Nós não acessamos conteúdo de conversas.',
+      question: 'E as taxas do gateway de pagamento?',
+      answer: 'Nosso gateway integrado tem até 40% menos taxas que concorrentes como PagSeguro e Mercado Pago. Mais vendas no seu bolso.',
     },
     {
-      question: 'E se meu funcionário sair?',
-      answer: 'Você remove o acesso instantaneamente. Todo histórico permanece na empresa.',
+      question: 'Posso cancelar quando quiser?',
+      answer: 'Sim. Sem multa, sem fidelidade, sem burocracia. Você exporta seus dados e pronto. Mas spoiler: ninguém quer sair depois que experimenta.',
     },
   ],
 }
 
 export default function FAQ() {
-  const [activeCategory, setActiveCategory] = useState('plataforma')
+  const [activeCategory, setActiveCategory] = useState('geral')
 
   return (
     <section id="faq" className="py-20 lg:py-32 bg-white">

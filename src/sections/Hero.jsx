@@ -45,7 +45,7 @@ const badgeColors = {
   accent: 'bg-accent-100 text-accent-600',
 }
 
-export default function Hero() {
+export default function Hero({ onOpenSignup, onOpenVideo }) {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
@@ -85,18 +85,18 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg lg:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              Plataforma completa com IA que administra parte do seu negócio, atende 24/7, qualifica leads e converte automaticamente. Do design, anúncio e atendimento, ao relatório e estratégia.
+              Plataforma completa com IA que administra 92,7% do seu negócio, do estratégico, ao pós venda.
+              <br /><br />
+              Chega de sofrer com agências que não entregam resultado, com funcionários desmotivados. Deixe a nossa máquina de vender muito te levar à alta rentabilidade com o menor esforço. Tá preparado?
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <a href="http://localhost:5174/login?register=true">
-                <Button size="lg">
-                  Testar grátis por 7 dias
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </a>
-              <Button variant="secondary" size="lg">
+              <Button size="lg" onClick={onOpenSignup}>
+                Testar grátis por 7 dias
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+              <Button variant="secondary" size="lg" onClick={onOpenVideo}>
                 <Play className="w-5 h-5" />
                 Ver demonstração
               </Button>

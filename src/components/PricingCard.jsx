@@ -8,7 +8,8 @@ export default function PricingCard({
   features,
   highlighted = false,
   ctaText = 'Começar agora',
-  className = ''
+  className = '',
+  onOpenSignup
 }) {
   return (
     <div
@@ -50,14 +51,13 @@ export default function PricingCard({
         ))}
       </ul>
 
-      <a href="http://localhost:5174/login?register=true">
-        <Button
-          variant={highlighted ? 'secondary' : 'primary'}
-          className="w-full"
-        >
-          {ctaText}
-        </Button>
-      </a>
+      <Button
+        variant={highlighted ? 'secondary' : 'primary'}
+        className="w-full"
+        onClick={onOpenSignup}
+      >
+        {ctaText}
+      </Button>
     </div>
   )
 }

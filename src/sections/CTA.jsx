@@ -2,7 +2,7 @@ import React from 'react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import Button from '../components/Button'
 
-export default function CTA() {
+export default function CTA({ onOpenSignup }) {
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-accent-700 relative overflow-hidden">
       {/* Background decoration */}
@@ -28,16 +28,15 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="http://localhost:5174/login?register=true">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="bg-white hover:bg-gray-50 text-primary-700"
-            >
-              Testar grátis por 7 dias
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-          </a>
+          <Button
+            variant="secondary"
+            size="lg"
+            className="bg-white hover:bg-gray-50 text-primary-700"
+            onClick={onOpenSignup}
+          >
+            Testar grátis por 7 dias
+            <ArrowRight className="w-5 h-5" />
+          </Button>
           <Button
             variant="outline"
             size="lg"
