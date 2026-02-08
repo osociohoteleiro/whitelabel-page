@@ -6,10 +6,31 @@ const API_URL = window.location.hostname === 'localhost'
   ? 'http://localhost:3001/api'
   : 'https://api.osociohoteleiro.com.br/api'
 
-// URL do dashboard
-const DASHBOARD_URL = window.location.hostname === 'localhost'
-  ? 'http://localhost:5174/dashboard'
-  : 'https://app.iaihotel.com.br/dashboard'
+// URL do dashboard - dinâmica baseada no domínio da landing page
+const getDashboardUrl = () => {
+  const hostname = window.location.hostname
+
+  // Localhost (desenvolvimento)
+  if (hostname === 'localhost') {
+    return 'http://localhost:5174/dashboard'
+  }
+
+  // Mapeamento de domínios landing page -> app
+  const domainMappings = {
+    'maquina.devendermuito.com': 'https://m.devendermuito.com/dashboard',
+    // Adicionar outros mapeamentos conforme necessário
+  }
+
+  // Verifica se há um mapeamento específico para o domínio atual
+  if (domainMappings[hostname]) {
+    return domainMappings[hostname]
+  }
+
+  // Fallback padrão
+  return 'https://app.iaihotel.com.br/dashboard'
+}
+
+const DASHBOARD_URL = getDashboardUrl()
 
 export default function LoginModal({ isOpen, onClose, onOpenSignup }) {
   const [showPassword, setShowPassword] = useState(false)
